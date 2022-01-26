@@ -27,7 +27,7 @@ const users = require('./controllers/users');
 // home route
 app.get('/', (req, res) => {
     res.json({
-        message: "Welcome to the MERN Auth API"
+        message: "Welcome to the backend"
     });
 });
 
