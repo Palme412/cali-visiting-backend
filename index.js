@@ -23,6 +23,7 @@ app.use(passport.initialize());
 
 // controllers
 const users = require('./controllers/users');
+const notes = require('./controllers/notelist');
 
 // home route
 app.get('/', (req, res) => {
@@ -32,6 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/users', users);
+app.use('/note', notes)
 
 app.listen(PORT, () => {
     console.log(`Server listening on PORT`, PORT);
