@@ -37,4 +37,30 @@ router.post('/add_note', (req, res) => {
     });
 });
 
+router.post('/note/:noteId', (req, res) => {
+    const { noteId } = req.params;
+    if (!noteId) {
+        return res.json({ success: false, error: 'No note id provided' });
+    }
+    Note.findById(noteId, (error, Note) => {
+        if (error) return res.json({ success: false, error });
+        const { text } = req.body;
+        if (text) Note.text = text;
+        Note.save(error => {
+            if (error) return res.json({ success: false, error });
+            return res.json({ success: true });
+        });
+    });
+});
+
+router.delete('/note/:noteId', (req, res) => {
+    const { noteId } = req.params;
+    if (!noteId) {
+        return res.json({ success: false, error: 'No note id provided ' });
+    }
+    Note.remove({ _id: noteId }, (error, note) => {
+        if (error) return res.json({ success: false, error });
+        return res.json({ success: true });
+    });
+});
 module.exports = router;
