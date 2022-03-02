@@ -24,10 +24,8 @@ db.on('error', (error) => {
     console.log('Database error', error);
 });
 
-// Import models here
 const User = require('./user');
 
 module.exports = {
-    // model goes here
     User
 }
