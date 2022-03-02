@@ -10,7 +10,7 @@
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8",
-    "node": "^17.5.0",
+    "node": "16.9.1",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0"
   },
