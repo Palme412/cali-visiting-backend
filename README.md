@@ -1,5 +1,5 @@
 # cali-visiting-backend
-This is the backend for the Cali Visiting repo. This backend handles user and notes connection to the database.
+This is the backend for the Cali Visiting repo. This backend handles user and notes connection to the database. This runs MERN
 
 # Code Snippets
 ```
