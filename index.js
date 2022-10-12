@@ -5,7 +5,7 @@ const app = express();
 const passport = require('passport');
 require('./config/passport')(passport);
 // still not working
-const PORT = process.env.PORT || 8000;
+// const PORT = process.env.PORT || 8000;
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -35,6 +35,6 @@ app.get('/', (req, res) => {
 app.use('/users', users);
 app.use('/note', notes)
 
-app.listen(PORT, () => {
-    console.log(`Server listening on PORT`, PORT);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server listening on PORT`, PORT);
+// });
